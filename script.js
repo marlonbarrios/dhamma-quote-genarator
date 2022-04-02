@@ -10,12 +10,6 @@ const loader = document.getElementById('loader')
 
 let apiQuotes = [];
 
-function fadeIn() {
-    AOS.init({
-        delay:200,
-        duration: 1000
-      });
-    }
 
 
 function showLoadingSpinner() {
@@ -64,7 +58,7 @@ async function getQuotes() {
         const response = await fetch(apiUrl);
         apiQuotes = await response.json();
         getNewQuote();
-      fadeIn();
+ 
     } catch (error) {
 alert('oops... try again')
     }
