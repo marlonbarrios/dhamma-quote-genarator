@@ -1,10 +1,9 @@
 const quoteContainer = document.getElementById('quote-container')
 const quoteText = document.getElementById('quote')
 const authorText = document.getElementById('author')
-const book = document.getElementById('book')
+
 const title = document.getElementById('chapter')
 const nikaya = document.getElementById('nikaya')
-
 const twitterBtn = document.getElementById('twitter')
 const newQuoteBtn = document.getElementById('new-quote')
 const loader = document.getElementById('loader')
@@ -17,12 +16,7 @@ function fadeIn() {
         duration: 1000
       });
     }
-function fadeInText() {
-        AOS.init({
-            delay:200,
-            duration: 1000
-          });
-        }
+
 
 function showLoadingSpinner() {
     loader.hidden = false;
@@ -53,7 +47,6 @@ function getNewQuote() {
         quoteText.classList.remove('long-quote');
     }
  
-
     quoteText.textContent = quote.text;
     nikaya.textContent= quote.nikaya;
     title.textContent= quote.chapterTitle;
@@ -71,9 +64,8 @@ async function getQuotes() {
         const response = await fetch(apiUrl);
         apiQuotes = await response.json();
         getNewQuote();
-       fadeIn();
+      fadeIn();
     } catch (error) {
-      
 alert('oops... try again')
     }
 }
@@ -87,7 +79,7 @@ function tweetQuote() {
 //Evet listeners
 newQuoteBtn.addEventListener('click', getNewQuote)
 twitterBtn.addEventListener('click', tweetQuote)
-newQuoteBtn.addEventListener('click', fadeInText)
+
 //on load
 getQuotes();
 
