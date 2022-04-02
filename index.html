@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" type='image/png' href="favicon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="quote-container" id="quote-container" data-aos="fade-in" data-aos-delay="1000">
+        <div class="quote-text">
+            <i class="fas fa-quote-left"></i>
+
+            <span id="quote" data-aos="fade-in" data-aos-delay="1000"></span>
+        </div>
+        <div class="quote-author">
+            <h4>Chapter: <span id="chapter"></span>
+        </div>
+        <div class="quote-author">
+            <h4>Nikaya: <span id="nikaya"></span></h3>
+        </div>
+        <div class="quote-author">
+            <h4>Translated by <span id="author"></span></h4>
+        </div>
+
+        <div class="button-container">
+            <button class="twitter-button" id="twitter" title="Tweet This!">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button id="new-quote">
+                Get quote from the Dhammapada
+            </button>
+        </div>
+    </div>
+
+    <div class="loader" id="loader"></div>
+
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
+    <div class="footer">
+        <p>The MIT License (MIT) by <a href="https://marlonbarriossolano.io/"> Marlon Barrios Solano</a> and consuming
+            the <a href="http://palicanon.codebuckets.com.au/"> Pali Cannon API </a>
+            Copyright &copy; <script type="text/javascript">
+                document.write(new Date().getFullYear());
+            </script>
+    </div>
+
+    </p>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+
+    </script>
+
+    </div>
+
+</body>
+
+</html>
